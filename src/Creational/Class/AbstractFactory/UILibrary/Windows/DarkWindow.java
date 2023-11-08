@@ -1,2 +1,11 @@
-package Creational.Class.AbstractFactory.UILibrary.DarkWindow;public class DarkWindow {
+package Creational.Class.AbstractFactory.UILibrary.Windows;
+
+import java.awt.*;
+
+public class DarkWindow extends Window {
+    public DarkWindow(Frame frame) {
+        super(frame);
+    }
+
+
 }

@@ -1,6 +1,12 @@
 import Behavioral.Object.State.Metro_Gate.Gate.Gate;
 import Behavioral.Object.State.Metro_Gate.User;
+import Creational.Class.AbstractFactory.UILibrary.abstractFactory.UIFactory;
+import Creational.Class.AbstractFactory.UILibrary.concreteFactory.LightUIFactory;
+import Structural.Object.Adapter.DatabaseAdapter.Adapter.LegacyDatabaseAdapter;
+import Structural.Object.Adapter.DatabaseAdapter.MSSQLDatabaseSystem;
+import Structural.Object.Adapter.DatabaseAdapter.Target.DatabaseSystem;
 
+import java.awt.*;
 import java.math.BigDecimal;
 
 public class Main {
@@ -23,6 +29,14 @@ public class Main {
         gate2.processing(user1);
         gate2.open(user1);
 
+        UIFactory uiFactory = new LightUIFactory();
+        uiFactory.createButton();
+        uiFactory.createWindow(new Frame());
+
+        DatabaseSystem databaseSystem = MSSQLDatabaseSystem.INSTANCE;
+        databaseSystem.runQuery();
+        databaseSystem = LegacyDatabaseAdapter.INSTANCE;
+        databaseSystem.runQuery();
 
     }
 }

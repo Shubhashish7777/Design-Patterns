@@ -1,2 +1,6 @@
-package Creational.Class.AbstractFactory.UILibrary.Buttons;public class DarkButton {
+package Creational.Class.AbstractFactory.UILibrary.Buttons;
+
+import java.awt.*;
+
+public class DarkButton extends Button {
 }
